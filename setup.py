@@ -1,7 +1,7 @@
 from setuptools import setup
 import os
 
-VERSION = "0.1"
+VERSION = "0.2a0"
 
 
 def get_long_description():
@@ -27,10 +27,10 @@ setup(
     license="Apache License, Version 2.0",
     version=VERSION,
     packages=["datasette_allow_permissions_debug"],
-    entry_points={"datasette": ["allow_permissions_debug = datasette_allow_permissions_debug"]},
-    install_requires=["datasette"],
-    extras_require={
-        "test": ["pytest", "pytest-asyncio", "httpx"]
+    entry_points={
+        "datasette": ["allow_permissions_debug = datasette_allow_permissions_debug"]
     },
+    install_requires=["datasette>=1.0a20"],
+    extras_require={"test": ["pytest", "pytest-asyncio", "httpx"]},
     tests_require=["datasette-allow-permissions-debug[test]"],
 )
