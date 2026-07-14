@@ -1,0 +1,28 @@
+[project]
+name = "datasette-allow-permissions-debug"
+version = "0.2a0"
+description = "Always allow access to /-/permissions, for debugging"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = ["datasette>=1.0a20"]
+
+[project.urls]
+Homepage = "https://github.com/simonw/datasette-allow-permissions-debug"
+Issues = "https://github.com/simonw/datasette-allow-permissions-debug/issues"
+CI = "https://github.com/simonw/datasette-allow-permissions-debug/actions"
+Changelog = "https://github.com/simonw/datasette-allow-permissions-debug/releases"
+
+[project.entry-points.datasette]
+allow_permissions_debug = "datasette_allow_permissions_debug"
+
+[dependency-groups]
+dev = ["pytest", "pytest-asyncio", "httpx"]
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
