@@ -1,12 +1,14 @@
 [project]
 name = "datasette-allow-permissions-debug"
-version = "0.2a0"
+version = "0.2a1"
 description = "Always allow access to /-/permissions, for debugging"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
 license = "Apache-2.0"
 requires-python = ">=3.10"
-dependencies = ["datasette>=1.0a20"]
+dependencies = [
+    "datasette>=1.0a37"
+]
 
 [project.urls]
 Homepage = "https://github.com/simonw/datasette-allow-permissions-debug"
